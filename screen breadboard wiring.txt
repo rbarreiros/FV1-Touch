@@ -1,0 +1,18 @@
+ILI9341 touchscreen - STM32F103 bluepill board 
+
+1. Vcc - 3.3v
+2. Gnd - Gnd
+3. CS - B8
+4. Reset - 3.3v
+5. DC - B9
+6. MOSI - A7
+7. SCK - A5
+8. LED - 3.3v
+9. MISO - A6
+
+(Touch pins)
+10. TCLK - A5
+11. TCS - B6
+12. TDIN - A7
+13. TDO - A6
+14. TIRQ - not used

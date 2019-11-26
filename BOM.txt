@@ -1,0 +1,44 @@
+FV1 Touch
+
+Qty Value                 Device                    Package                 Parts                                     Description                                                                                             
+                                                                                        
+2                         78LXX-SOT89               SOT89                   78L05, 78L33                              VOLTAGE REGULATOR                                                                                       
+1                         ATTINY85                  PDIP08_300MIL           TINY85                                    ATMEL ATtiny 85                                                                                         
+1                         CRYSTALPTH-2X6-KIT        CRYSTAL-PTH-2X6-CYL-KIT X1                                        Crystals (Generic)  32768Hz                                                                                    
+1                         DIODESOD-123              SOD-123                 D2                                        Diode MBR0520LT1G Schottky SMD                                                                                                 
+1                         FV1                       SO1C28                  IC3                                                                                                                                               
+1                         LED5MM                    LED5MM                  LED                                       LED                                                                                                                                                                                
+1                         R-EU_0204/5               0204/5                  LDR                                       LDR RESISTOR                                                                              
+1                         TRIM_US-B25P              B25P                    R16                                       POTENTIOMETER TRIMMER 5K                                                                                         
+2   -EEPROM               -EEPROM                   SOCKED-DIL08            E1, E2                                                                                                                                            
+1   2.7v                  SMALL_DIODEDO35-7         DO35-7                  ZENER                                     Small Signal Diode REVERSE BIASED!!                                                                                                                                                            
+3   B100k                 9MM_SNAP-IN_POT_          9MM_SNAP-IN_POT         CTRL1, CTRL2, CTRL3                       9mm vertical snap-in pot, Alpha                                                     
+1   B100k                 ALPHA-9MM-DUALPOT         DUAL_9MM_SNAP-IN_POT    VOLUME                                    9mm vertical snap-in pot, Dual Gang
+1   B10k                  ALPHA-9MM-DUALPOT         DUAL_9MM_SNAP-IN_POT    MIX                                       9mm vertical snap-in pot, Dual Gang                                                              
+1   LM386N-1              LM386N-1                  DIL08                   IC1                                       Low Voltage Audio Power Amplifier                                                                                                                                                  
+1   SPI_TFT_DISPLAY_TOUCH SPI_TFT_DISPLAY_TOUCH     SPI_DISPLAY_TOUCH       J1                                        SPI TFT Display with touch 2.4"                                                                             
+1   TL074D                TL074D                    SO14                    IC4                                       OP AMP                                                                                                  
+1   TQ2-L-5V              TQ2-L-5V                  TQ2                     RELAY                                     LOW PROFILE 2 FORM C RELAY NAiS    
+1   STM32F103             BLUEPILL BOARD                                                        
+
+2   100k                  R-US_R0805                R0805                   R6, R11                                   RESISTOR  SMD                                                                           
+5   10k                   R-US_R0805                R0805                   R5, R7, R14, R15, R26                     RESISTOR  SMD                                                                                           
+3   100r                  R-US_R0805                R0805                   R8, R12, R13                              RESISTOR  SMD                                                                                                                                               
+6   15k                   R-US_R0805                R0805                   R4, R9, R10, R17, R19, R20                RESISTOR  SMD                                                                                                                                                                                   
+3   1k                    R-US_R0805                R0805                   R3, R18, R22                              RESISTOR  SMD                                                                           
+2   1m                    R-US_R0805                R0805                   R1, R2                                    RESISTOR  SMD 
+
+1   100n                  C5/3                      C5B3                    C1                                        CAPACITOR BOX 
+2   10n                   CAP1206                   C1206                   C14, C19                                  CAPACITOR SMD 
+1   15pf                  CAP1206                   C1206                   C7                                        CAPACITOR SMD 
+1   1n                    CAP1206                   C1206                   C4                                        CAPACITOR SMD 
+1   1u                    CAP1206                   C1206                   C9                                        CAPACITOR SMD 
+1   220p                  CAP1206                   C1206                   C12                                       CAPACITOR SMD                                                                                                        
+1   2n2                   CAP1206                   C1206                   C10                                       CAPACITOR SMD                                                                                                        
+1   470p                  CAP1206                   C1206                   C2                                        CAPACITOR SMD  
+
+2   47uf                  C-PR-SMD-SV-C             SV-C                    C17, C18                                  47uf polarized capacitors SMD
+1   100uF                 100UF-POLAR-25V-20%(ELEC) PANASONIC_D             C16                                       100µF polarized capacitors  SMD                                                                            
+2   10uf                  C-PR-SMD-SV-C             SV-C                    C5, C15                                   10uf polarized capacitors  SMD 
+
+5   1u                    C-NP-5,0-7,5X3,0          C5,0-7,5X3,0            C3, C8, C11, C13, C24                     MLCC

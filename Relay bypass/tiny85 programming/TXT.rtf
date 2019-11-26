@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red116\green127\blue126;\red255\green255\blue255;\red83\green83\blue83;
+\red52\green52\blue52;\red17\green134\blue138;\red117\green117\blue117;\red11\green83\blue86;}
+{\*\expandedcolortbl;;\cssrgb\c52941\c56863\c56863;\cssrgb\c100000\c100000\c100000;\cssrgb\c40000\c40000\c40000;
+\cssrgb\c26667\c26667\c26667;\cssrgb\c0\c59216\c61176;\cssrgb\c53333\c53333\c53333;\cssrgb\c0\c39608\c41176;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24240\viewh17240\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs36 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs54 \cf4 Configuring Arduino Uno as a ISP (In-System Programming)\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf2 \cb3 To program the ATtiny85 we need to first set Arduino Uno in ISP mode. Connect your Arduino Uno to the PC. Open Arduino IDE and open the ArduinoISP example file (File -> Examples -> ArduinoISP) and upload it.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs52 \cf5 \
+\pard\pardeftab720\partightenfactor0
+
+\fs54 \cf4 \cb3 Adding ATtiny85 Support to Arduino IDE\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf2 \cb3 By default Arduino IDE doesn't support ATtiny85 so we should add ATtiny boards to Arduino IDE. Open File -> Preferences and in the Additional Boards Manager URLs give this url\'a0{\field{\*\fldinst{HYPERLINK "https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json"}}{\fldrslt \cf6 https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json}}.\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "javascript:openLightBox('a3fd406e0c',%200);"}}{\fldrslt \cf6 {{\NeXTGraphic 2015-06-15 22_27_58-Edit project - Hackster.io.png.jpg \width9220 \height10200 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}}}\pard\pardeftab720\qc\partightenfactor0
+\cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 After this is done open Tools -> Board -> Board Manager\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "javascript:openLightBox('3b2a619770',%200);"}}{\fldrslt \cf6 {{\NeXTGraphic 2015-06-15 22_30_32-ArduinoISP _ Arduino 1.6.4.png.jpg \width8740 \height10200 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}}}\pard\pardeftab720\qc\partightenfactor0
+\cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 After opening Board Manager scroll down the list where it says "attiny by Davis A. Mellis". Click on that and install it.\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "javascript:openLightBox('adfa1fe0e6',%200);"}}{\fldrslt \cf8 {{\NeXTGraphic 2015-06-15 22_31_02-Boards Manager.png.jpg \width13600 \height7640 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}}}\pard\pardeftab720\qc\partightenfactor0
+\cf8 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 After installing now you would be able to see a new entry in the Board menu\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "javascript:openLightBox('ed3f64bed2',%200);"}}{\fldrslt \cf6 {{\NeXTGraphic 2015-06-15 22_31_41-ArduinoISP _ Arduino 1.6.4.png.jpg \width8040 \height10200 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}}}\pard\pardeftab720\qc\partightenfactor0
+\cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\fs52 \cf5 \
+\pard\pardeftab720\partightenfactor0
+
+\fs54 \cf4 \cb3 Connecting ATtiny85 with Arduino Uno\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf2 \cb3 Now with all the above things ready we will start programming the attiny85. Connect the arduino uno to attiny85 using breadboard as below.\cb1 \
+\cb3 Arduino Uno \'96 ATtiny85\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+5V \'96 Vcc\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Gnd \'96 Gnd\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pin 13 \'96 Pin 2\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pin 12 \'96 Pin 1\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pin 11 \'96 Pin 0\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pin 10 \'96 Reset\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "javascript:openLightBox('2707f0ff77',%200);"}}{\fldrslt \cf6 {{\NeXTGraphic Programming ATtiny85 with Arduino Uno_bb.png \width13600 \height10060 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}}}\pard\pardeftab720\qc\partightenfactor0
+\cf6 \
+}
