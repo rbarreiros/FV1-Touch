@@ -2,16 +2,23 @@
 // https://www.instagram.com/1337_fx/
 
 /**
- * 
  * Use this stm32 arduino version as the others don't play well with other original
  * arduino libs.
  * 
  * https://github.com/stm32duino/BoardManagerFiles/raw/master/STM32/package_stm_index.json
  * 
- * 
  * Using arduino-cli to compile and/or upload the sketch
  * 
  * arduino-cli compile -b STM32:stm32:GenF1 --build-properties upload.maximum_size=131072 TouchPedal.ino
+ *
+ *
+ * This sketch requires the following libraries:
+ *
+ * Adafruit GFX		https://github.com/adafruit/Adafruit-GFX-Library
+ * Adafruit ILI9341	https://github.com/adafruit/Adafruit_ILI9341
+ * XPT2046 Touchscreen	https://github.com/PaulStoffregen/XPT2046_Touchscreen
+ * Bounce2 		https://github.com/thomasfredericks/Bounce2
+ * Arduino SPI
  *
  */ 
 
