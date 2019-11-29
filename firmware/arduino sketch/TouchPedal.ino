@@ -261,6 +261,7 @@ void setup()
   // Configure the Debouncer
   sw.attach(RELAY_SWITCH, INPUT_PULLUP);
   sw.interval(DEBOUNCETIME);
+  effectOff();
 
   // Signal the user we're ready  blinking
   // bypass led three times
