@@ -19,7 +19,6 @@
 #include <Adafruit_ILI9341.h>
 #include <XPT2046_Touchscreen.h>
 #include <SPI.h>
-#include <EEPROM.h>
 #include <Bounce2.h>
 
 // Fonts and graphics
@@ -75,7 +74,7 @@ int old_digital = -999; // Value last displayed
 #define PRIMETIME    1000
 #define DOUBLECLICK  1000
 
-int state = 0;
+uint8_t state = 0;
 int primetime = 0;
 int relay_address = 0;
 unsigned long lastMillis = 0;
@@ -116,7 +115,7 @@ unsigned long doubleMillis = 0;
 Adafruit_ILI9341 tft(TFT_CS, TFT_DC);
 SPIClass mySPI; //Create an SPI instance on default SPI port (SPI 1)
 XPT2046_Touchscreen ts(CS_PIN); // Chip Select pin, SPI port
-Bounce sw;
+Bounce sw = Bounce();
 
 void splashScreen(void)
 {
@@ -213,8 +212,8 @@ void setup()
   pinMode(PB3, INPUT); // fv1 clip
   pinMode(PB4, OUTPUT); //fv1 pin13, high ext, low int
 
-  pinMode(PB7, OUTPUT); //eeprom1
-  pinMode(PB5, OUTPUT); //eeprom2
+  pinMode(PB7, OUTPUT); //select eeprom1
+  pinMode(PB5, OUTPUT); //select eeprom2
 
   pinMode(PA0, INPUT); // pot1
   pinMode(PA1, INPUT); // pot2
@@ -233,7 +232,7 @@ void setup()
   digitalWrite(PB14, HIGH); //s2
 
   // True bypass relay
-  pinMode(RELAY_SWITCH, INPUT);
+  pinMode(RELAY_SWITCH, INPUT_PULLUP);
   digitalWrite(RELAY_SWITCH, HIGH); // internal pullup
   digitalWrite(RELAY_LED, HIGH); // led off
   pinMode(RELAY_LED, OUTPUT);
@@ -259,35 +258,19 @@ void setup()
   digitalWrite(PB13, LOW); //s1
   digitalWrite(PB14, LOW); //s2
 
-  // Debouncer
-  sw.attach(RELAY_SWITCH);
+  // Configure the Debouncer
+  sw.attach(RELAY_SWITCH, INPUT_PULLUP);
   sw.interval(DEBOUNCETIME);
 
-  // setup the relay now, after boot up
-  state = EEPROM.read(relay_address);
-  sw.update();
-
-  // Apparently if button is pressed on power up
-  // it saves the button state to turn on on next
-  // power up
-  if(digitalRead(RELAY_SWITCH) == 0)
-  {
-    state &= 1;
-    state ^= 1;
-    EEPROM.write(relay_address, state);
-    digitalWrite(RELAY_LED, HIGH); delay(300);
-    digitalWrite(RELAY_LED, LOW); delay(300);
-    digitalWrite(RELAY_LED, HIGH); delay(300);
-    digitalWrite(RELAY_LED, LOW); delay(300);
-    digitalWrite(RELAY_LED, HIGH); delay(300);
-    digitalWrite(RELAY_LED, LOW); delay(300);
-    digitalWrite(RELAY_LED, HIGH);
-  }
-
-  if(state == 0)
-    effectOff();
-  else
-    effectOn();  
+  // Signal the user we're ready  blinking
+  // bypass led three times
+  digitalWrite(RELAY_LED, HIGH); delay(300);
+  digitalWrite(RELAY_LED, LOW); delay(300);
+  digitalWrite(RELAY_LED, HIGH); delay(300);
+  digitalWrite(RELAY_LED, LOW); delay(300);
+  digitalWrite(RELAY_LED, HIGH); delay(300);
+  digitalWrite(RELAY_LED, LOW); delay(300);
+  digitalWrite(RELAY_LED, HIGH);
 
   updateTime = millis(); // Next update time
   lastMillis = updateTime;
@@ -301,7 +284,7 @@ void loop()
   // and at the same time, keep the on/off more responsive
   if(sw.update())
   {
-    if(sw.fell() == 1) 
+    if(sw.fell()) 
     {
       if(state == 1)
        effectOff();
@@ -310,8 +293,7 @@ void loop()
       
       lastMillis = millis();
     }
-  
-    if(sw.fell() == 0) 
+    else
     {
       if(primetime == 1) 
       {
