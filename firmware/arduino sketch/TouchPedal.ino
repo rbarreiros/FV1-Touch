@@ -87,21 +87,21 @@ unsigned long doubleMillis = 0;
  *          FV1 S1 PB13 - |         |- GND
  *          FV1 S2 PB14 - |         |- 3V3
  *                 PB15 - |         |- NRST
- *   Relay Coil 1  PA8  - |         |- PB11
- *   Relay Coil 2  PA9  - |         |- PB10
- *   Relay Switch  PA10 - |         |- PB1
- *   Relay LED     PA11 - |         |- PB0 LDR ???
- *                 PA12 - |         |- PA7 MOSI1 (SPI 1)
- *                 PA15 - |         |- PA6 MISO1 (SPI 1)
- *        FV1 Clip PB3  - |         |- PA5 SCK1  (SPI 1)
- *       FV1 PIN13 PB4  - |         |- PA4 POT4 (Volume)
- *         EEPROM2 PB5  - |         |- PA3 POT5 (Mix)
- *  (Touch) CS_PIN PB6  - |         |- PA2 POT3
- *         EEPROM1 PB7  - |         |- PA1 POT2
- *   (TFT)  TFT_CS PB8  - |         |- PA0 POT1
- *   (TFT)  TFT_DC PB9  - |         |- PC15
- *                 5V   - |         |- PC14
- *                 GND  - |         |- PC13
+ *                 PA8  - |         |- PB11 Relay LED
+ *                 PA9  - |         |- PB10
+ *                 PA10 - |         |- PB1
+ *                 PA11 - |         |- PB0  LDR ???
+ *                 PA12 - |         |- PA7  MOSI1 (SPI 1)
+ *                 PA15 - |         |- PA6  MISO1 (SPI 1)
+ *        FV1 Clip PB3  - |         |- PA5  SCK1  (SPI 1)
+ *       FV1 PIN13 PB4  - |         |- PA4  POT4 (Volume)
+ *         EEPROM2 PB5  - |         |- PA3  POT5 (Mix)
+ *  (Touch) CS_PIN PB6  - |         |- PA2  POT3
+ *         EEPROM1 PB7  - |         |- PA1  POT2
+ *   (TFT)  TFT_CS PB8  - |         |- PA0  POT1
+ *   (TFT)  TFT_DC PB9  - |         |- PC15 Relay Switch
+ *                 5V   - |         |- PC14 Relay Coil 2
+ *                 GND  - |         |- PC13 Relay Coil 1
  *                 3V3  - |         |- VBAT
  *                        -----------
  *                          | | | |

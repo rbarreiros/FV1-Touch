@@ -9,9 +9,10 @@
 #define CS_PIN  PB6
 
 // Relay
-#define RELAY1       PA8
-#define RELAY2       PA9
-#define RELAY_SWITCH PA10
-#define RELAY_LED    PA11
+// Changed the pins for Lee Nonme
+#define RELAY1       PC13
+#define RELAY2       PC14
+#define RELAY_SWITCH PC15
+#define RELAY_LED    PB11
 
 #endif
